@@ -53,7 +53,7 @@
                     <div class="absolute -top-10 -left-10 w-40 h-40 bg-slate-50 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
                     <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate" class="relative z-10 w-full rounded shadow-2xl grayscale hover:grayscale-0 transition duration-700">
                     <div class="absolute -bottom-10 -right-10 z-20 bg-brand-black p-8 text-white max-w-xs shadow-xl hidden md:block">
-                        <p class="text-4xl font-display font-bold text-brand-yellow mb-1">15+</p>
+                        <p class="text-4xl font-display font-bold text-brand-yellow mb-1">10+</p>
                         <p class="text-xs uppercase tracking-widest text-slate-400">Yıllık Tecrübe</p>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                 <span class="text-brand-red font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Kurumsal Profil</span>
                 <h2 class="text-4xl md:text-5xl font-display font-black text-brand-black mb-8 leading-tight">
                     DEĞİŞEN DÜNYADA <br>
-                    <span class="italic text-slate-400 font-serif">SABİT KALAN TEK ŞEY</span> <br>
+                    <span class="text-slate-500 font-bold">SABİT KALAN TEK ŞEY</span> <br>
                     GÜVENLİK.
                 </h2>
                 <p class="text-slate-600 text-lg leading-relaxed mb-8 border-l-2 border-brand-red pl-6">
@@ -80,6 +80,45 @@
         </div>
     </div>
 </section>
+
+<!-- Section 2.5: References / Business Partners -->
+<!-- Section 2.5: References / Business Partners -->
+<section class="py-16 bg-slate-50 border-y border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
+        <h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Güçlü İş Ortaklarımız</h2>
+    </div>
+    
+    <div class="relative w-full overflow-hidden">
+        <div class="flex space-x-12 animate-scroll w-[200%]">
+            <!-- Original Logos -->
+            @foreach(range(1, 10) as $i)
+            <div class="flex-shrink-0 w-32 h-16 bg-white border border-slate-200 rounded flex items-center justify-center text-slate-400 font-bold text-xs shadow-sm grayscale hover:grayscale-0 transition duration-300">
+                REFERANS {{ $i }}
+            </div>
+            @endforeach
+            
+            <!-- Duplicate Logos for Seamless Loop -->
+            @foreach(range(1, 10) as $i)
+            <div class="flex-shrink-0 w-32 h-16 bg-white border border-slate-200 rounded flex items-center justify-center text-slate-400 font-bold text-xs shadow-sm grayscale hover:grayscale-0 transition duration-300">
+                REFERANS {{ $i }}
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+        animation: scroll 30s linear infinite;
+    }
+    .animate-scroll:hover {
+        animation-play-state: paused;
+    }
+</style>
 
 <!-- Section 3: Dark Services "Showcase" -->
 <section class="py-16 md:py-32 bg-brand-black text-white relative">
