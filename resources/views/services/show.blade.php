@@ -4,22 +4,22 @@
 
 @section('content')
     <!-- Hero Section -->
-    <div class="relative bg-corporate-navy py-20 text-center text-white overflow-hidden">
+    <div class="relative bg-corporate-navy pt-32 pb-20 text-center text-white overflow-hidden">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0">
-            <img src="{{ $service->image }}" alt="{{ $service->title }}" class="w-full h-full object-cover opacity-20">
-            <div class="absolute inset-0 bg-gradient-to-t from-corporate-navy via-corporate-navy/80 to-transparent"></div>
+            <img src="{{ $service->image }}" alt="{{ $service->title }}" class="w-full h-full object-cover opacity-20 transform scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-corporate-navy via-corporate-navy/90 to-transparent"></div>
         </div>
 
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-center items-center space-x-2 text-sm text-slate-300 mb-4">
-                <a href="{{ route('home') }}" class="hover:text-white transition">Ana Sayfa</a>
-                <span>/</span>
-                <a href="{{ route('services') }}" class="hover:text-white transition">Hizmetlerimiz</a>
-                <span>/</span>
-                <span class="text-brand-red font-semibold">{{ $service->title }}</span>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+            <div class="flex justify-center items-center space-x-2 text-sm text-slate-300 mb-6 font-medium tracking-wide">
+                <a href="{{ route('home') }}" class="hover:text-white transition hover:underline">Ana Sayfa</a>
+                <span class="text-slate-500">/</span>
+                <a href="{{ route('services') }}" class="hover:text-white transition hover:underline">Hizmetlerimiz</a>
+                <span class="text-slate-500">/</span>
+                <span class="text-brand-red">{{ $service->title }}</span>
             </div>
-            <h1 class="text-3xl md:text-5xl font-display font-bold text-white">{{ $service->title }}</h1>
+            <h1 class="text-4xl md:text-6xl font-display font-black text-white tracking-tight leading-tight drop-shadow-lg">{{ $service->title }}</h1>
         </div>
     </div>
 

@@ -63,7 +63,7 @@
                                 class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-red transition-all duration-300 group-hover:w-1/2 group-hover:-translate-x-1/2 {{ request()->routeIs('corporate.*') || request()->routeIs('about') ? '!w-1/2 !-translate-x-1/2' : '' }}"></span>
                         </a>
                         <div
-                            class="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-lg overflow-hidden invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 border-t-2 border-brand-red transform translate-y-2 group-hover:translate-y-0">
+                            class="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-lg overflow-hidden invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                             <a href="{{ route('corporate.index') }}"
                                 class="block px-6 py-3 text-sm text-corporate-navy hover:bg-slate-50 hover:text-brand-red transition border-b border-slate-50 font-medium">Hakkımızda</a>
                             <a href="{{ route('corporate.vision') }}"
@@ -92,7 +92,7 @@
                                 class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-brand-red transition-all duration-300 group-hover:w-1/2 group-hover:-translate-x-1/2 {{ request()->routeIs('services') || request()->routeIs('service.show') ? '!w-1/2 !-translate-x-1/2' : '' }}"></span>
                         </a>
                         <div
-                            class="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-lg overflow-hidden invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 border-t-2 border-brand-red transform translate-y-2 group-hover:translate-y-0">
+                            class="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-lg overflow-hidden invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                             @foreach(\App\Http\Controllers\ServiceController::getServices() as $s)
                                 <a href="{{ route('service.show', $s['slug']) }}"
                                     class="block px-6 py-3 text-sm text-corporate-navy hover:bg-slate-50 hover:text-brand-red transition border-b border-slate-50 last:border-0 font-medium">
@@ -198,84 +198,171 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-grow w-full pt-20">
+    <main class="flex-grow w-full pt-20 lg:pt-24 relative z-0">
         @yield('content')
     </main>
 
     <!-- Modern "Big Fat" Footer -->
     <!-- Footer -->
-    <footer class="bg-brand-black text-white pt-24 pb-8 border-t border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-20 mb-16">
-                
-                <!-- Brand & Info -->
-                <div class="space-y-6">
-                    <h2 class="text-3xl font-display font-black tracking-tighter leading-none">
-                        AB<span class="text-brand-red">.</span>
+    <footer class="relative bg-slate-950 text-white pt-20 pb-10 overflow-hidden z-10 font-sans border-t-4 border-brand-red">
+        
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] opacity-[0.03]"></div>
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-red/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-corporate-navy/20 rounded-full blur-[100px] pointer-events-none translate-y-1/2 -translate-x-1/3"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Newsletter / Pre-Footer -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-b border-white/10 pb-12 mb-16">
+                <div class="lg:col-span-7">
+                    <h2 class="text-2xl md:text-3xl font-display font-black tracking-tight text-white mb-2">
+                        GÜVENLİK GÜNDEMİNDEN HABERDAR OLUN
                     </h2>
-                    <p class="text-slate-400 text-sm leading-relaxed max-w-xs">
-                        Modern tehditlere karşı, devlet disiplini ve özel sektör çevikliğiyle harmanlanmış, sarsılmaz bir güvenlik çözümü.
+                    <p class="text-slate-400 text-sm max-w-xl leading-relaxed">
+                        Sektörel gelişmeler, risk analizleri ve AB Koruma'dan en yeni duyurular için bültenimize kaydolun. Spam yok, sadece güvenlik.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-8 h-8 rounded bg-white/5 flex items-center justify-center hover:bg-brand-red transition text-slate-400 hover:text-white">
-                            <span class="sr-only">Facebook</span>
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </div>
+                <div class="lg:col-span-5">
+                    <form class="flex flex-col sm:flex-row gap-3">
+                        <input type="email" placeholder="E-posta adresiniz" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded focus:outline-none focus:border-brand-red/50 text-white placeholder-slate-500 transition-colors">
+                        <button type="button" class="px-6 py-3 bg-brand-red text-white font-bold tracking-wide rounded hover:bg-red-700 transition duration-300 shadow-[0_0_20px_rgba(204,0,0,0.3)] hover:shadow-[0_0_30px_rgba(204,0,0,0.5)] whitespace-nowrap">
+                            ABONE OL
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Main Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
+                
+                <!-- Brand & Info (5 Cols) -->
+                <div class="lg:col-span-5 pr-8">
+                    <a href="{{ route('home') }}" class="inline-block group mb-6">
+                        <div class="flex items-center gap-4">
+                            <div class="p-2 bg-white rounded-lg shadow-lg shadow-brand-red/20 group-hover:shadow-brand-red/40 transition duration-500">
+                                <img src="{{ asset('img/logo.jpeg') }}" alt="AB Koruma" class="h-12 w-auto">
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-2xl font-display font-black tracking-tighter text-white leading-none">AB KORUMA</span>
+                                <span class="text-[0.6rem] uppercase tracking-[0.35em] text-brand-red font-bold mt-1">SECURITY SYSTEMS</span>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="text-slate-400 text-sm leading-7 mb-8 border-l-2 border-brand-red/30 pl-4">
+                        5188 Sayılı Yasa kapsamında yetkilendirilmiş, Türkiye'nin lider güvenlik çözüm ortağı. AVM, Plaza, Şantiye ve Kurumsal tesislerde yüksek standartlı koruma sağlıyoruz.
+                    </p>
+                    <div class="flex gap-3">
+                        @foreach(['facebook', 'twitter', 'instagram', 'linkedin'] as $social)
+                        <a href="#" class="w-10 h-10 rounded bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-brand-red hover:bg-brand-red transition-all duration-300 group">
+                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z"/>
+                            </svg>
                         </a>
-                        <a href="#" class="w-8 h-8 rounded bg-white/5 flex items-center justify-center hover:bg-brand-red transition text-slate-400 hover:text-white">
-                            <span class="sr-only">Instagram</span>
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.072 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.052.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                        </a>
+                        @endforeach
                     </div>
                 </div>
 
-                <!-- Navigation -->
-                <div>
-                    <h3 class="text-sm font-bold text-white uppercase tracking-widest mb-6">Kurumsal</h3>
+                <!-- Quick Links (2 Cols) -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-sm font-bold text-white uppercase tracking-widest mb-6 border-b-2 border-brand-red pb-2 inline-block">Kurumsal</h3>
                     <ul class="space-y-3">
-                        <li><a href="{{ route('home') }}" class="text-slate-400 hover:text-brand-red transition text-sm">Ana Sayfa</a></li>
-                        <li><a href="{{ route('corporate.index') }}" class="text-slate-400 hover:text-brand-red transition text-sm">Hakkımızda</a></li>
-                        <li><a href="{{ route('contact') }}" class="text-slate-400 hover:text-brand-red transition text-sm">Bize Ulaşın</a></li>
-                    </ul>
-                </div>
-
-                <!-- Services -->
-                <div>
-                    <h3 class="text-sm font-bold text-white uppercase tracking-widest mb-6">Hizmetlerimiz</h3>
-                    <ul class="space-y-3">
-                        @foreach(\App\Http\Controllers\ServiceController::getServices() as $s)
-                        <li><a href="{{ route('service.show', $s['slug']) }}" class="text-slate-400 hover:text-brand-red transition text-sm">{{ $s['title'] }}</a></li>
+                         @foreach([
+                            ['route' => 'corporate.index', 'label' => 'Hakkımızda'],
+                            ['route' => 'corporate.vision', 'label' => 'Yönetim İlkeleri'],
+                            ['route' => 'services', 'label' => 'Hizmetlerimiz'],
+                            ['route' => 'corporate.documents', 'label' => 'Yasal Belgeler'],
+                            ['route' => 'contact', 'label' => 'İnsan Kaynakları']
+                        ] as $link)
+                        <li>
+                            <a href="{{ route($link['route']) }}" class="text-slate-400 hover:text-white text-sm transition-colors flex items-center gap-2 group">
+                                <span class="w-1 h-1 bg-brand-red rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                <span class="group-hover:translate-x-1 transition-transform">{{ $link['label'] }}</span>
+                            </a>
+                        </li>
                         @endforeach
                     </ul>
                 </div>
 
-                <!-- Contact Info (Non-linked look as requested) -->
-                <div>
-                    <h3 class="text-sm font-bold text-white uppercase tracking-widest mb-6">İletişim</h3>
-                    <div class="space-y-4">
-                        <div class="group">
-                            <p class="text-xs text-slate-500 uppercase tracking-wide mb-1">Adres</p>
-                            <p class="text-slate-300 text-sm leading-relaxed">
-                                Örnek Mah. Fehmi Tokay Cad. <br>Hışım Apt. No:10 D 11 <br>ATAŞEHİR İSTANBUL
-                            </p>
+                <!-- Services (3 Cols) -->
+                <div class="lg:col-span-3">
+                    <h3 class="text-sm font-bold text-white uppercase tracking-widest mb-6 border-b-2 border-brand-red pb-2 inline-block">Çözümlerimiz</h3>
+                    <ul class="space-y-3">
+                        @foreach(\App\Http\Controllers\ServiceController::getServices() as $s)
+                        <li>
+                            <a href="{{ route('service.show', $s['slug']) }}" class="text-slate-400 hover:text-white text-sm transition-colors flex items-center gap-2 group">
+                                <svg class="w-3 h-3 text-slate-600 group-hover:text-brand-red transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                <span>{{ $s['title'] }}</span>
+                            </a>
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
+
+                <!-- Contact Section (2 Cols) -->
+                <div class="lg:col-span-2 space-y-8">
+                    <h3 class="text-sm font-bold text-white uppercase tracking-widest mb-6 border-b-2 border-brand-red pb-2 inline-block">İletişim</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Address -->
+                        <div class="group flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded bg-white/5 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white text-xs font-bold uppercase tracking-wide mb-1 opacity-50">Genel Merkez</h4>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    Örnek Mah. Fehmi Tokay Cad. <br>Hışım Apt. No:10 D:11 <br>
+                                    <span class="text-white font-medium">Ataşehir / İSTANBUL</span>
+                                </p>
+                            </div>
                         </div>
-                        <div class="group">
-                            <p class="text-xs text-slate-500 uppercase tracking-wide mb-1">Telefon</p>
-                            <p class="text-slate-300 text-sm font-medium">0216 315 63 63</p>
+
+                        <!-- Phone -->
+                        <div class="group flex items-center gap-4">
+                             <div class="flex-shrink-0 w-10 h-10 rounded bg-white/5 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white text-xs font-bold uppercase tracking-wide mb-1 opacity-50">Çağrı Merkezi</h4>
+                                <a href="tel:02163156363" class="text-lg font-bold text-white hover:text-brand-red transition">0216 315 63 63</a>
+                            </div>
                         </div>
-                        <div class="group">
-                            <p class="text-xs text-slate-500 uppercase tracking-wide mb-1">E-Posta</p>
-                            <p class="text-slate-300 text-sm">info@abozelguvenlik.com</p>
+
+                        <!-- Email -->
+                        <div class="group flex items-center gap-4">
+                             <div class="flex-shrink-0 w-10 h-10 rounded bg-white/5 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-white text-xs font-bold uppercase tracking-wide mb-1 opacity-50">E-Posta</h4>
+                                <a href="mailto:info@abozelguvenlik.com" class="text-sm text-slate-300 hover:text-white transition">info@abozelguvenlik.com</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Bottom Bar -->
-            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-slate-600">
-                <p>&copy; {{ date('Y') }} AB Koruma ve Özel Güvenlik Hizmetleri. Tüm hakları saklıdır.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white transition">Gizlilik Politikası</a>
-                    <a href="#" class="hover:text-white transition">Kullanım Koşulları</a>
+            <!-- Certs & Bottom -->
+            <div class="border-t border-white/10 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex flex-col sm:flex-row items-center gap-4 text-xs text-slate-500">
+                        <span>&copy; {{ date('Y') }} AB KORUMA GÜVENLİK HİZMETLERİ LTD. ŞTİ.</span>
+                        <div class="hidden sm:block w-1 h-1 bg-slate-700 rounded-full"></div>
+                        <div class="flex gap-4">
+                            <a href="#" class="hover:text-white transition-colors">KVKK</a>
+                            <a href="#" class="hover:text-white transition-colors">Yasal Uyarı</a>
+                            <a href="#" class="hover:text-white transition-colors">Bilgi Toplumu Hizmetleri</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Fake Certs badges for Authority -->
+                    <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                         <!-- Using simple shapes/text representations for certs as placeholders -->
+                         <div class="h-8 px-2 border border-slate-600 rounded flex items-center justify-center text-[10px] font-bold text-slate-400">ISO 9001</div>
+                         <div class="h-8 px-2 border border-slate-600 rounded flex items-center justify-center text-[10px] font-bold text-slate-400">OHSAS 18001</div>
+                         <div class="h-8 px-2 border border-slate-600 rounded flex items-center justify-center text-[10px] font-bold text-slate-400">5188 YÖNETMELİK</div>
+                    </div>
                 </div>
             </div>
         </div>

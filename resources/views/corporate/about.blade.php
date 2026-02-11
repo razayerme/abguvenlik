@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Page Header -->
-    <div class="bg-corporate-navy py-16 relative overflow-hidden">
+    <div class="bg-corporate-navy pt-32 pb-16 relative overflow-hidden">
         <div class="absolute inset-0 bg-brand-black/20"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <h1 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Hakkımızda</h1>

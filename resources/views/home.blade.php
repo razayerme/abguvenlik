@@ -89,6 +89,9 @@
     </div>
     
     <div class="relative w-full overflow-hidden">
+        <!-- Fade Gradients -->
+        <div class="absolute inset-y-0 left-0 w-24 md:w-32 bg-gradient-to-r from-slate-50 to-transparent z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-24 md:w-32 bg-gradient-to-l from-slate-50 to-transparent z-10"></div>
         <div class="flex space-x-12 animate-scroll w-[200%]">
             <!-- Original Logos -->
             @foreach(range(1, 10) as $i)
