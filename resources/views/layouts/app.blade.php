@@ -236,8 +236,8 @@
             <!-- Main Footer Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
                 
-                <!-- Brand & Info (5 Cols) -->
-                <div class="lg:col-span-5 pr-8">
+                <!-- Brand & Info (4 Cols) -->
+                <div class="lg:col-span-4 pr-8">
                     <a href="{{ route('home') }}" class="inline-block group mb-6">
                         <div class="flex items-center gap-4">
                             <div class="p-2 bg-white rounded-lg shadow-lg shadow-brand-red/20 group-hover:shadow-brand-red/40 transition duration-500">
@@ -299,8 +299,8 @@
                     </ul>
                 </div>
 
-                <!-- Contact Section (2 Cols) -->
-                <div class="lg:col-span-2 space-y-8">
+                <!-- Contact Section (3 Cols) -->
+                <div class="lg:col-span-3 space-y-8">
                     <h3 class="text-sm font-bold text-white uppercase tracking-widest mb-6 border-b-2 border-brand-red pb-2 inline-block">İletişim</h3>
                     
                     <div class="space-y-6">
@@ -350,8 +350,8 @@
                         <span>&copy; {{ date('Y') }} AB KORUMA GÜVENLİK HİZMETLERİ LTD. ŞTİ.</span>
                         <div class="hidden sm:block w-1 h-1 bg-slate-700 rounded-full"></div>
                         <div class="flex gap-4">
-                            <a href="#" class="hover:text-white transition-colors">KVKK</a>
-                            <a href="#" class="hover:text-white transition-colors">Yasal Uyarı</a>
+                            <a href="{{ route('page.kvkk') }}" class="hover:text-white transition-colors">KVKK</a>
+                            <a href="{{ route('page.terms') }}" class="hover:text-white transition-colors">Yasal Uyarı</a>
                             <a href="#" class="hover:text-white transition-colors">Bilgi Toplumu Hizmetleri</a>
                         </div>
                     </div>

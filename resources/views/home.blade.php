@@ -94,16 +94,16 @@
         <div class="absolute inset-y-0 right-0 w-24 md:w-32 bg-gradient-to-l from-slate-50 to-transparent z-10"></div>
         <div class="flex space-x-12 animate-scroll w-[200%]">
             <!-- Original Logos -->
-            @foreach(range(1, 10) as $i)
-            <div class="flex-shrink-0 w-32 h-16 bg-white border border-slate-200 rounded flex items-center justify-center text-slate-400 font-bold text-xs shadow-sm grayscale hover:grayscale-0 transition duration-300">
-                REFERANS {{ $i }}
+            @foreach(['THY', 'Kalyon İnşaat', 'Acıbadem', 'Vadi İstanbul', 'Zorlu Center', 'Rönesans Holding', 'Garanti BBVA', 'Medipol Mega', 'Sur Yapı', 'Dap Yapı'] as $ref)
+            <div class="flex-shrink-0 w-32 h-16 bg-white border border-slate-200 rounded flex items-center justify-center text-slate-500 font-bold text-xs shadow-sm grayscale hover:grayscale-0 transition duration-300">
+                {{ $ref }}
             </div>
             @endforeach
             
             <!-- Duplicate Logos for Seamless Loop -->
-            @foreach(range(1, 10) as $i)
-            <div class="flex-shrink-0 w-32 h-16 bg-white border border-slate-200 rounded flex items-center justify-center text-slate-400 font-bold text-xs shadow-sm grayscale hover:grayscale-0 transition duration-300">
-                REFERANS {{ $i }}
+            @foreach(['THY', 'Kalyon İnşaat', 'Acıbadem', 'Vadi İstanbul', 'Zorlu Center', 'Rönesans Holding', 'Garanti BBVA', 'Medipol Mega', 'Sur Yapı', 'Dap Yapı'] as $ref)
+            <div class="flex-shrink-0 w-32 h-16 bg-white border border-slate-200 rounded flex items-center justify-center text-slate-500 font-bold text-xs shadow-sm grayscale hover:grayscale-0 transition duration-300">
+                {{ $ref }}
             </div>
             @endforeach
         </div>
@@ -140,7 +140,7 @@
                 ['03', 'ŞANTİYE', 'Malzeme ve ekipman güvenliği için sert tedbirler.', 'insaat'],
                 ['04', 'KONUT & SİTE', 'Aileniz için 7/24 huzur çemberi.', 'site'],
                 ['05', 'HASTANE', 'Hassas süreç yönetimi ve kriz müdahalesi.', 'hastane'],
-                ['06', 'DANIŞMANLIK', 'Güvenlik açıklarını kapatan stratejik analiz.', '']
+                ['06', 'DANIŞMANLIK', 'Güvenlik açıklarını kapatan stratejik analiz.', 'guvenlik-danismanligi']
             ] as $service)
             <a href="{{ route('services') }}#{{ $service[3] }}" class="group border-b md:border-r border-white/10 p-8 md:p-10 hover:bg-white/5 transition duration-500 relative overflow-hidden">
                 <span class="text-xs font-bold text-brand-red mb-4 md:mb-6 block">{{ $service[0] }}</span>

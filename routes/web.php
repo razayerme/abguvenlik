@@ -22,7 +22,7 @@ Route::get('/iletisim', function () {
     return view('contact');
 })->name('contact');
 
-Route::post('/iletisim', function () {
-    // Form submission logic would go here
-    return back()->with('success', 'Mesajınız başarıyla gönderildi.');
-})->name('contact.submit');
+Route::post('/iletisim', [App\Http\Controllers\ContactController::class, 'submit'])->name('contact.submit');
+
+Route::get('/kvkk', [App\Http\Controllers\PageController::class, 'kvkk'])->name('page.kvkk');
+Route::get('/yasal-uyari', [App\Http\Controllers\PageController::class, 'terms'])->name('page.terms');

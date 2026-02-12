@@ -12,7 +12,7 @@ class ServiceController extends Controller
             'avm-guvenligi' => [
                 'title' => 'Alışveriş Merkezi Güvenliği',
                 'slug' => 'avm-guvenligi',
-                'image' => 'https://images.unsplash.com/photo-1519567241046-7f570eee3c9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'image' => 'https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
                 'content' => 'AB KORUMA ÖZEL GÜVENLİK HİZMETLERİ; AVM güvenliği konusunda uzman bir güvenlik şirketi olup; Alışveriş merkezi, mağaza gibi tesislerde işletmenin talepleri doğrultusunda işletmeyi, çalışanlarını, müşteri ve ziyaretçilerini her türlü tehdide karşı korumak üzere gerekli önleyici tedbirler alıp, geniş kapsamlı bir güvenlik ağı oluşturarak hizmet vermekteyiz.
 
 Profesyonel AVM Güvenliği Şu Başlıklarla sağlanır;
@@ -115,7 +115,7 @@ Beton santralı, kule, vinç, kantar binası gibi sabit tesislerin yerleri, çö
             'site-guvenligi' => [
                 'title' => 'Site ve Konut Güvenliği',
                 'slug' => 'site-guvenligi',
-                'image' => 'https://images.unsplash.com/photo-1560518883-ce09059ee971?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'image' => 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
                 'content' => 'Site, villa, toplu konutlarda ve özel konutlarda yaşayan insanların huzur ve güvenliği ön planda tutularak gerekli güvenlik önlemlerinin alınmasında AB KORUMA ÖZEL GÜVENLİK HİZMETLERİ olarak hizmet vermekteyiz.
 
 Firmamızca; Apartman, Site ve konutların sabotaj, hırsızlık, terör, saldırı gibi tehditlere karşı tehdit ve güvenlik analizi çıkartılır. İşbu site güvenlik testi ile site güvenlik açıkları tesbit edildikten sonra gerekli görevli sayısı teklif edilir. Proje, toplu konut yönetimi veya site yönetimi tarafından kabul gördüğü takdirde eğer yoksa site güvenlik sertifikası alımı için çalışmalar başlatılıp, Valilik iznini müteakip, fiziki olarak emlak ve site güvenliği hizmetine başlanır.
@@ -149,6 +149,43 @@ Etkili Hastane güvenliği ve hasta güvenliği konularında kullanıldığımı
 3- Sağlık kuruluşunda firmamızca görevlendirilen özel güvenlik görevlisi gerekli psikolojik değerlendirme, meslek içi eğitim ve bir dizi testten geçerek göreve başlamaktadır. Firmamıza özel hastane güvenliği oryantasyon uygulamaları ile bu şekilde risk ve tehlike karşısında hazır özel güvenlik görevlileri yetiştirilmektedir.
 
 AB KORUMA ÖZEL GÜVENLİK ; Özel Hastane güvenliği-Tüm bu ilkeler dahilinde Hastane yönetimince alınan karar ve kuralların uygulanabilmesi için, öngörülen bölge ve belirlenen saatler arasında gözetim, denetim ve kontrol görevi firmamızca büyük bir hassasiyetle yerine getirilmektedir.'
+            ],
+            'guvenlik-danismanligi' => [
+                'title' => 'Güvenlik Danışmanlığı',
+                'slug' => 'guvenlik-danismanligi',
+                'image' => 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'content' => 'Güvenlik, sadece kapıda bekleyen bir görevli veya duvarda asılı bir kameradan ibaret değildir. Gerçek güvenlik; potansiyel tehditleri henüz oluşmadan öngörebilmek, riskleri minimize edecek stratejiler geliştirmek ve kriz anında soğukkanlılıkla işleyen bir eylem planına sahip olmaktır. AB KORUMA ÖZEL GÜVENLİK olarak, "Güvenlik Danışmanlığı" hizmetimizle kurumunuzun güvenlik mimarisini baştan aşağıya analiz ediyor ve size özel, sürdürülebilir koruma stratejileri oluşturuyoruz.
+
+5188 Sayılı Yasa ve Uluslararası Standartlar
+Hizmetlerimiz, 5188 Sayılı Özel Güvenlik Hizmetlerine Dair Kanun ve ilgili yönetmeliklere tam uyum çerçevesinde yürütülmektedir. Danışmanlık sürecimiz, yasal yükümlülüklerinizi eksiksiz yerine getirmenizi sağlarken, aynı zamanda uluslararası güvenlik standartlarını (ISO 27001, OHSAS vb.) işletmenize entegre etmeyi hedefler.
+
+Kapsamlı Risk Analizi ve Tehdit Değerlendirmesi
+Her projenin DNA\'sı farklıdır. Bir AVM\'nin güvenlik ihtiyaçları ile bir sanayi tesisinin veya bir eğitim kurumunun ihtiyaçları birbirinden tamamen farklıdır. Uzman ekibimizle gerçekleştirdiğimiz saha keşifleri ve analizler sonucunda:
+- Fiziki Güvenlik Açıkları: Çevre güvenliği, giriş-çıkış noktaları, aydınlatma ve kör noktaların tespiti.
+- Elektronik Sistem Yeterliliği: CCTV, alarm, geçiş kontrol ve yangın algılama sistemlerinin verimlilik analizi.
+- Prosedürel Eksiklikler: Mevcut güvenlik talimatlarının ve acil durum planlarının güncelliğinin kontrolü.
+belirlenir ve raporlanır. Bu rapor, güvenlik harcamalarınızı en verimli noktalara yönlendirmeniz için bir yol haritası niteliğindedir.
+
+Entegre Güvenlik Çözümleri
+Güvenlik danışmanlığımız, insan gücü ve teknolojinin mükemmel uyumunu hedefler. Sadece personel sayısını artırmak yerine, doğru teknolojiyi doğru personelle buluşturarak maliyet-etkin çözümler sunuyoruz. Elektronik güvenlik sistemlerinin (kamera, sensör, biyometrik okuyucular) kurulumundan, bu sistemleri yönetecek personelin eğitimine kadar uçtan uca bir entegrasyon sağlıyoruz.
+
+Kriz Yönetimi ve Acil Durum Planlaması
+Beklenmedik durumlara hazırlıklı olmak, zararı en aza indirmenin tek yoludur. Danışmanlık hizmetimiz kapsamında:
+- Yangın, deprem, sel gibi doğal afetler,
+- Hırsızlık, sabotaj, terör saldırısı gibi insan kaynaklı tehditler,
+- İş kazaları ve sağlık acilleri
+için senaryo bazlı eylem planları hazırlıyoruz. Ayrıca, bu planların kağıt üzerinde kalmaması için personelinize düzenli tatbikatlar yaptırıyor ve reflekslerini canlı tutuyoruz.
+
+Denetim ve Sürdürülebilirlik
+Güvenlik yaşayan bir süreçtir. Kurulan sistemin işleyişini düzenli olarak "Haberli" ve "Habersiz" denetimlerle kontrol ediyoruz. "Gizli Müşteri" uygulamalarımızla güvenlik personelinin dikkatini, prosedürlere uyumunu ve ziyaretçi ile iletişimini ölçümlüyoruz. Raporladığımız eksiklikler, hizmet kalitesinin sürekli artmasını sağlayan bir geri bildirim mekanizması oluşturur.
+
+Neden AB KORUMA Danışmanlığı?
+- Sektörel Uzmanlık: Yılların getirdiği saha tecrübesi ve mevzuat hakimiyeti.
+- Objektif Bakış Açısı: İçeriden görülemeyen riskleri dışarıdan profesyonel bir gözle tespit etme.
+- Maliyet Avantajı: Gereksiz güvenlik harcamalarını önleyerek bütçe optimizasyonu.
+- Prestij ve Güven: Kurumsal itibarınızı koruyan profesyonel güvenlik duruşu.
+
+AB KORUMA ile güvende olmak bir tesadüf değil, stratejik bir tercihtir.'
             ]
         ];
     }

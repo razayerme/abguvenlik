@@ -23,7 +23,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3">
             <div class="md:col-span-1 bg-slate-100 relative h-64 md:h-auto">
                  <a href="{{ route('service.show', 'avm-guvenligi') }}" class="block h-full w-full group relative">
-                    <img src="https://images.unsplash.com/photo-1519567241046-7f570eee3c9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AVM Güvenliği" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="AVM Güvenliği" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-brand-black/20 group-hover:bg-brand-black/0 transition duration-300"></div>
                  </a>
             </div>
@@ -128,7 +128,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3">
             <div class="md:col-span-1 bg-slate-100 relative h-64 md:h-auto order-1 md:order-last">
                  <a href="{{ route('service.show', 'site-guvenligi') }}" class="block h-full w-full group relative">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059ee971?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Site Güvenliği" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Site Güvenliği" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
                      <div class="absolute inset-0 bg-brand-black/20 group-hover:bg-brand-black/0 transition duration-300"></div>
                  </a>
             </div>
@@ -188,6 +188,41 @@
                     <div class="flex items-center text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-red rounded-full mr-2"></span>Poliklinik Düzeni</div>
                 </div>
                 <a href="{{ route('service.show', 'hastane-guvenligi') }}" class="inline-flex items-center text-brand-red font-semibold hover:text-corporate-navy transition group">
+                    Hizmeti İncele
+                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Item: Danışmanlık (New) -->
+     <div id="guvenlik-danismanligi" class="scroll-mt-32 bg-white rounded-lg border border-slate-200 overflow-hidden hover:shadow-lg transition duration-300">
+        <div class="grid grid-cols-1 md:grid-cols-3">
+            <div class="md:col-span-1 bg-slate-100 relative h-64 md:h-auto order-1 md:order-last">
+                 <a href="{{ route('service.show', 'guvenlik-danismanligi') }}" class="block h-full w-full group relative">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Güvenlik Danışmanlığı" class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                     <div class="absolute inset-0 bg-brand-black/20 group-hover:bg-brand-black/0 transition duration-300"></div>
+                 </a>
+            </div>
+            <div class="md:col-span-2 p-8 md:p-10 order-2 md:order-first">
+                 <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 bg-slate-50 rounded flex items-center justify-center text-brand-red mr-4">
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                     <h2 class="text-2xl font-bold text-corporate-navy">
+                        <a href="{{ route('service.show', 'guvenlik-danismanligi') }}" class="hover:text-brand-red transition">Güvenlik Danışmanlığı</a>
+                     </h2>
+                </div>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    Sadece fiziksel güvenlik değil, stratejik planlama da sunuyoruz. Mevcut risklerin analizi, tehdit değerlendirmesi ve güvenlik prosedürlerinin oluşturulması konularında 5188 sayılı kanuna uygun profesyonel danışmanlık hizmeti veriyoruz.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                    <div class="flex items-center text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-yellow rounded-full mr-2"></span>Risk Analizi</div>
+                    <div class="flex items-center text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-yellow rounded-full mr-2"></span>Güvenlik Denetimi (Audit)</div>
+                    <div class="flex items-center text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-yellow rounded-full mr-2"></span>Kriz Yönetimi Planlaması</div>
+                    <div class="flex items-center text-sm text-slate-700"><span class="w-1.5 h-1.5 bg-brand-yellow rounded-full mr-2"></span>Acil Durum Senaryoları</div>
+                </div>
+                <a href="{{ route('service.show', 'guvenlik-danismanligi') }}" class="inline-flex items-center text-brand-red font-semibold hover:text-corporate-navy transition group">
                     Hizmeti İncele
                     <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
